@@ -1,0 +1,77 @@
+.hamb-container{
+  width: 15px;
+  height: 15px;
+}
+
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 4px;
+  background-color: #FFF;
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100dvhw;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 5;
+}
+
+.nav.active {
+  transform: translateX(0);
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #e91e63;
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(9px, 5px);
+  background-color: #FFF;
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(9px, -5px);
+  background-color: #FFF;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+

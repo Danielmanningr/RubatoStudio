@@ -1,0 +1,18 @@
+.bottom-header {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  background-color: #00000081;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.bottom-header h1 {
+  margin-left: 15px;
+}
